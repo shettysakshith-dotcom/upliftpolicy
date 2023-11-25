@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Target customers by incremental treatment effect while excluding sleeping dogs.">
+  <title>Uplift Policy · Working Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to results</a>
+  <header class="masthead"><a class="brand" href="https://github.com/SlateGitOrg/upliftpolicy">Uplift Policy</a><span class="build-state"><i></i> live computation</span></header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">Retention targeting</p>
+      <h1>Run the decision,<br><em>inspect the evidence.</em></h1>
+      <p class="lede">Target customers by incremental treatment effect while excluding sleeping dogs.</p>
+    </section>
+    <section class="workspace" aria-label="Interactive project workspace">
+      <form id="workspace-form" class="control-panel">
+        <div class="panel-heading"><span>01</span><div><p>Inputs</p><h2>Configure the run</h2></div></div>
+        <div class="fields"><label class="field" for="capacity"><span>Contact capacity</span><input id="capacity" name="capacity" type="number" value="3" min="1" max="100" step="any" data-suggested-step="1"></label>
+<label class="field" for="valuePerSave"><span>Value per retained customer</span><input id="valuePerSave" name="valuePerSave" type="number" value="500" min="1" max="10000" step="any" data-suggested-step="10"></label>
+<label class="field" for="customers"><span>Customer uplift estimates as JSON</span><textarea id="customers" name="customers" rows="10">[{&quot;id&quot;:&quot;C01&quot;,&quot;uplift&quot;:0.18,&quot;risk&quot;:0.72},{&quot;id&quot;:&quot;C02&quot;,&quot;uplift&quot;:-0.09,&quot;risk&quot;:0.84},{&quot;id&quot;:&quot;C03&quot;,&quot;uplift&quot;:0.12,&quot;risk&quot;:0.61},{&quot;id&quot;:&quot;C04&quot;,&quot;uplift&quot;:0.04,&quot;risk&quot;:0.91},{&quot;id&quot;:&quot;C05&quot;,&quot;uplift&quot;:0.15,&quot;risk&quot;:0.55}]</textarea></label></div>
+        <div class="actions"><button class="run" type="submit">Run analysis <span>→</span></button><button id="reset-button" class="reset" type="button">Reset</button></div>
+      </form>
+      <section id="results" class="result-panel" aria-live="polite" aria-busy="true">
+        <div class="panel-heading"><span>02</span><div><p>Output</p><h2>Decision trace</h2></div></div>
+        <div id="result-content" class="result-content"><div class="loading">Computing initial scenario…</div></div>
+      </section>
+    </section>
+  </main>
+  <footer><p>Built from the tested logic in <a href="https://github.com/SlateGitOrg/upliftpolicy">SlateGitOrg/upliftpolicy</a>.</p></footer>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
