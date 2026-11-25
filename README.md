@@ -2,9 +2,6 @@
 
 > Retention targeting by uplift with doubly-robust policy evaluation, including the customers your outreach drives away.
 
-[![CI and Pages](https://github.com/SlateGitOrg/upliftpolicy/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/SlateGitOrg/upliftpolicy/actions/workflows/ci.yml)
-[Live demo](https://slategitorg.github.io/upliftpolicy/)
-
 ![Uplift Policy desktop view](docs/assets/deployed-desktop.png)
 
 ## Why
@@ -43,7 +40,7 @@ The generator produces a population with known treatment effects. `study` fits l
 Requires Python 3.11+. There are no dependencies to install.
 
 ```bash
-git clone https://github.com/SlateGitOrg/upliftpolicy.git
+git clone https://github.com/shettysakshith-dotcom/upliftpolicy.git
 cd upliftpolicy
 python -m unittest discover -s tests -v   # 34 tests, about 2 s
 python -m src.demo                        # full report, tens of seconds
@@ -137,9 +134,3 @@ docs/        architecture notes and screenshots
 ## License
 
 MIT - see [LICENSE](LICENSE).
-
-## Maintainer
-
-Maintained by Dev Bhatt, a data analyst with 6+ years of experience building automated pipelines, controls, and dashboards. His work includes risk indicator tracking and reconciliation at JPMorgan Chase and reporting automation at FleetPride.
-
-For project-related questions, contact [Dev Bhatt](mailto:devbhattwork27@gmail.com) or connect on [LinkedIn](https://linkedin.com/in/dev-bhatt27).
